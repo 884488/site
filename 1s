@@ -108,3 +108,98 @@ avene@avenepc /dev/mygit $ sudo git status
 нечего коммитить, нет изменений в рабочем каталоге
 avene@avenepc /dev/mygit $ 
 
+
+
+
+
+
+
+
+
+---------------------------------------------------------
+avene@avenepc ~ $ sudo git status
+[sudo] пароль для avene: 
+fatal: Не найден git репозитоий (или один из его каталогов вплоть до точки монтирования /)
+Останавливаю поиск на границе файловой системы (так как GIT_DISCOVERY_ACROSS_FILESYSTEM не установлен).
+avene@avenepc ~ $ cd /div/mygit/
+bash: cd: /div/mygit/: Нет такого файла или каталога
+avene@avenepc ~ $ sudo cd /div/mygit
+sudo: cd: команда не найдена
+avene@avenepc ~ $ cd div/mygit
+bash: cd: div/mygit: Нет такого файла или каталога
+avene@avenepc ~ $ cd /dev/mygit/
+avene@avenepc /dev/mygit $ sudo git status
+На ветке master
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	1s
+	site/
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+avene@avenepc /dev/mygit $ git add .
+fatal: Не удалось создать «/dev/mygit/.git/index.lock»: Отказано в доступе
+avene@avenepc /dev/mygit $ sudo git add .
+avene@avenepc /dev/mygit $ git status
+На ветке master
+Изменения, которые будут включены в коммит:
+  (используйте «git reset HEAD <файл>…», чтобы убрать из индекса)
+
+	новый файл:    1s
+	новый файл:    "site/css/\320\237\321\203\321\201\321\202\320\276\320\271 \320\264\320\276\320\272\321\203\320\274\320\265\320\275\321\202"
+	новый файл:    site/index.html
+
+avene@avenepc /dev/mygit $ sudo git commit -m "Frist site commit ee"
+[master 37a4487] Frist site commit ee
+ 3 files changed, 127 insertions(+)
+ create mode 100644 1s
+ create mode 100644 "site/css/\320\237\321\203\321\201\321\202\320\276\320\271 \320\264\320\276\320\272\321\203\320\274\320\265\320\275\321\202"
+ create mode 100644 site/index.html
+avene@avenepc /dev/mygit $ git status
+На ветке master
+нечего коммитить, нет изменений в рабочем каталоге
+avene@avenepc /dev/mygit $ git remote add origin https://github.com/884488/site.git
+error: could not lock config file .git/config: Отказано в доступе
+fatal: не удалось установить «remote.origin.url» в «https://github.com/884488/site.git»
+avene@avenepc /dev/mygit $ sudo git remote add origin https://github.com/884488/site.git
+avene@avenepc /dev/mygit $ sudo git push -u origin master
+Username for 'https://github.com': 884488
+Password for 'https://884488@github.com': 
+Подсчет объектов: 11, готово.
+Delta compression using up to 4 threads.
+Сжатие объектов: 100% (9/9), готово.
+Запись объектов: 100% (11/11), 1.82 KiB | 931.00 KiB/s, готово.
+Total 11 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/884488/site.git
+ * [new branch]      master -> master
+Ветка «master» отслеживает внешнюю ветку «master» из «origin».
+avene@avenepc /dev/mygit $ sudo cd /dev
+sudo: cd: команда не найдена
+avene@avenepc /dev/mygit $ cd /dev
+avene@avenepc /dev $ sudo mkdir jquery
+avene@avenepc /dev $ cd /jquery
+bash: cd: /jquery: Нет такого файла или каталога
+avene@avenepc /dev $ cd /jquery
+bash: cd: /jquery: Нет такого файла или каталога
+avene@avenepc /dev $ sudo cd /jquery
+sudo: cd: команда не найдена
+avene@avenepc /dev $ cd jquery/
+avene@avenepc /dev/jquery $ git clone https://github.com/jquery/jquery.git
+fatal: не удалось создать рабочий каталог «jquery»: Отказано в доступе
+avene@avenepc /dev/jquery $ sudo git clone https://github.com/jquery/jquery.git
+Клонирование в «jquery»…
+remote: Counting objects: 42692, done.
+remote: Total 42692 (delta 0), reused 0 (delta 0), pack-reused 42692
+Получение объектов: 100% (42692/42692), 27.08 MiB | 2.05 MiB/s, готово.
+Определение изменений: 100% (30205/30205), готово.
+avene@avenepc /dev/jquery $ cd /dev/mygit
+avene@avenepc /dev/mygit $ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+
+нечего коммитить, нет изменений в рабочем каталоге
+avene@avenepc /dev/mygit $ 
+
+
+
