@@ -1,0 +1,110 @@
+avene@avenepc ~ $ cd dev/
+bash: cd: dev/: Нет такого файла или каталога
+avene@avenepc ~ $ cd /dev/
+avene@avenepc /dev $ mkdir mygit
+mkdir: невозможно создать каталог «mygit»: Отказано в доступе
+avene@avenepc /dev $ sudo mkdir mygit
+[sudo] пароль для avene: 
+avene@avenepc /dev $ cd mygit/
+avene@avenepc /dev/mygit $ git init
+/dev/mygit/.git: Отказано в доступе
+avene@avenepc /dev/mygit $ sudo git init
+Инициализирован пустой репозиторий Git в /dev/mygit/.git/
+avene@avenepc /dev/mygit $ git ststus
+git: «ststus» не является командой git. Смотрите «git --help».
+
+Самые похожие команды:
+	status
+avene@avenepc /dev/mygit $ git status
+На ветке master
+
+Еще нет коммитов
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	123.png
+	index.html
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+avene@avenepc /dev/mygit $ git add
+fatal: Не удалось создать «/dev/mygit/.git/index.lock»: Отказано в доступе
+avene@avenepc /dev/mygit $ sudo git add .
+avene@avenepc /dev/mygit $ git status
+На ветке master
+
+Еще нет коммитов
+
+Изменения, которые будут включены в коммит:
+  (используйте «git rm --cached <файл>…», чтобы убрать из индекса)
+
+	новый файл:    123.png
+	новый файл:    index.html
+
+avene@avenepc /dev/mygit $ sudo get status
+sudo: get: команда не найдена
+avene@avenepc /dev/mygit $ sudo git status
+На ветке master
+
+Еще нет коммитов
+
+Изменения, которые будут включены в коммит:
+  (используйте «git rm --cached <файл>…», чтобы убрать из индекса)
+
+	новый файл:    123.png
+	новый файл:    index.html
+
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      index.html
+
+avene@avenepc /dev/mygit $ sudo git add index.html
+avene@avenepc /dev/mygit $ sudo git status
+На ветке master
+
+Еще нет коммитов
+
+Изменения, которые будут включены в коммит:
+  (используйте «git rm --cached <файл>…», чтобы убрать из индекса)
+
+	новый файл:    123.png
+	новый файл:    index.html
+
+avene@avenepc /dev/mygit $ sudo git status
+На ветке master
+
+Еще нет коммитов
+
+Изменения, которые будут включены в коммит:
+  (используйте «git rm --cached <файл>…», чтобы убрать из индекса)
+
+	новый файл:    123.png
+	новый файл:    index.html
+
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      index.html
+
+avene@avenepc /dev/mygit $ git add /
+fatal: Не удалось создать «/dev/mygit/.git/index.lock»: Отказано в доступе
+avene@avenepc /dev/mygit $ git add
+fatal: Не удалось создать «/dev/mygit/.git/index.lock»: Отказано в доступе
+avene@avenepc /dev/mygit $ git add .
+fatal: Не удалось создать «/dev/mygit/.git/index.lock»: Отказано в доступе
+avene@avenepc /dev/mygit $ sudo git add .
+avene@avenepc /dev/mygit $ sudo git commit -m "MyCommit"
+[master (корневой коммит) 78774f7] MyCommit
+ 2 files changed, 10 insertions(+)
+ create mode 100644 123.png
+ create mode 100644 index.html
+avene@avenepc /dev/mygit $ sudo git status
+На ветке master
+нечего коммитить, нет изменений в рабочем каталоге
+avene@avenepc /dev/mygit $ 
+
