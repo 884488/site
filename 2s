@@ -1,0 +1,8 @@
+cd /dev/mygit/
+git status
+sudo git add .
+sudo ger add index.html
+sudo git commit -m "comeHTapuU*"
+sudo git push
+sudo git log --graph --all --decorate
+ 
